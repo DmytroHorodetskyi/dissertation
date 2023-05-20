@@ -1,0 +1,84 @@
+body {
+height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: linear-gradient(to bottom, #4fc4f6, #0da276);
+
+}
+.container {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+    text-align: center;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  margin: 10px 0;
+}
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.result.positive {
+    background-color: #b7e1cd;
+    color: #0c6b3a;
+}
+.result.negative {
+    background-color: #fcc5c0;
+    color: #b52b27;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+  }
+
+.buttonHolder{ text-align: center; }
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:focus {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
+}

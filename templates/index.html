@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Система прогнозування захворювання на діабет</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/main.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='images/diabetes.png')}}">
+</head>
+<body>
+    <h1>Система прогнозування захворювання на діабет</h1>
+    <h3>Перевірте вашу схильність до розвинення діабету!</h3>
+    <p>ВАЖЛИВО! Даний тест не є підстановою для початку медичної терапії або прийому будь-яких ліків.
+    У випадку, якщо тест покаже схильність до розвитку діабету, спочатку проконсультуйтесь з сімейним лікарем.</p>
+    <form action="{{url_for('get_data')}}" method="post">
+      <label for="field1">Введіть кількість вагітностей:</label>
+      <input type="number" id="field1" name="pregnancies" min="0" max="15" step="1" placeholder="0" required>
+
+      <span data-toggle="tooltip" title="Кількість вагітностей ">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Кількість вагітностей" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+
+      <label for="field2">Введіть рівень глюкози (ммоль/л):</label>
+      <input type="number" id="field2" name="glucose" min="0" max="300" step="0.01" placeholder="4.5" required>
+        <span data-toggle="tooltip" title="Значення глюкози після 2 годин після проведення ГТТ">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Значення глюкози після 2 годин після проведення ГТТ" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+      <label for="field3">Введіть значення диастолічного кров'яного тиску (мм рт ст):</label>
+      <input type="number" id="field3" name="bp" min="0" max="300" step="0.01" placeholder="80" required>
+        <span data-toggle="tooltip" title="Нижнє число при вимірюванні тиску">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Нижнє число при вимірюванні тиску" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+
+      <label for="field4">Введіть значення товщини шкіри (мм):</label>
+      <input type="number" id="field4" name="skin" min="0" max="80" step="0.01" placeholder="20" required>
+        <span data-toggle="tooltip" title="Товщина шкіри на зворотній стороні верхньої сторони плеча">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Товщина шкіри на зворотній стороні верхньої сторони плеча" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+
+      <label for="field5">Введіть рівень інсуліну (мкОД/л) :</label>
+      <input type="number" id="field5" name="insulin" min="0" max="400" step="0.01" placeholder="60" required>
+        <span data-toggle="tooltip" title="Рівень інсуліну після двох годин після прийому їжі">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Рівень інсуліну після двох годин після прийому їжі" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+
+      <label for="field6">Введіть ІМТ (кг/м^2):</label>
+      <input type="number" id="field6" name="BMI" min="0" max="45" step="0.01" placeholder="20" required>
+        <span data-toggle="tooltip" title="Маса поділити на зріст в квадраті">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Маса поділити на зріст в квадраті" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+
+      <label for="field7">Введіть значення функції педігрі:</label>
+      <input type="number" id="field7" name="pedigree" min="0" max="1" step="0.01" placeholder="0.5" required>
+        <span data-toggle="tooltip" title="Значення ймовірності успадкувати діабет">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Значення ймовірності успадкувати діабет" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+      <label for="field8">Введіть ваш вік:</label>
+      <input type="number" id="field8" name="age" min="0" max="120" step="1" placeholder="18" required>
+        <span data-toggle="tooltip" title="Кількість повних років">
+          <button type="button" class="hint" data-toggle="tooltip"
+          data-placement="bottom" title="Кількість повних років" style="pointer-events: none;" disabled> ? </button>
+      </span>
+        <br><br>
+
+      <div class="buttonHolder">
+        <input type="submit" value="Відправити">
+      </div>
+
+</form>
+
+</body>
+
+
+
+</html>
